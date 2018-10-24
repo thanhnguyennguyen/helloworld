@@ -1,12 +1,11 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	card := newCard()
 	fmt.Println(card)
+	fmt.Println("teo")
 }
 
 func newCard() string {

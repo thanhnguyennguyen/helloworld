@@ -34,6 +34,15 @@ We need to specify data type when we declare them
 
 ### Declare functions
         
-        func [function name]() [return type] {
+        func [function name]([argument name] [argument data type], ...) [return type] {
 
         }
+### slice and array
+- array: fixed length list of things
+
+            var a [4]int
+            a[0] = 1
+
+- slice: an array that can grow or shrink
+
+            letters := []string{"a", "b", "c", "d"}
