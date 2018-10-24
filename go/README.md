@@ -23,6 +23,8 @@ We need to specify data type when we declare them
 - string: use double quotes 
 - int
 - float64
+- array
+- map
 
 ### Declare new variables:
 - var [variable name] [datatype]
