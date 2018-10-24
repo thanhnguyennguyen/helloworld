@@ -31,3 +31,9 @@ We need to specify data type when we declare them
 #### declare multiple variables:
         const a, b, c = 3, 4, "foo"  // a = 3, b = 4, c = "foo", untyped integer and string constants
         const u, v float32 = 0, 3    // u = 0.0, v = 3.0
+
+### Declare functions
+        
+        func [function name]() [return type] {
+
+        }

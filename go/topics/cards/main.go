@@ -5,6 +5,10 @@ import (
 )
 
 func main() {
-	var card string = "nguyen"
+	card := newCard()
 	fmt.Println(card)
+}
+
+func newCard() string {
+	return "nguyen"
 }
