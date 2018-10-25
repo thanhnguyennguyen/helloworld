@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // create a new type 'deck', which is a slice of string
@@ -50,7 +51,9 @@ func (d deck) saveToFile(fileName string) error {
  */
 func (d deck) shuffle() {
 	for i := range d {
-		r := rand.Intn(len(d) - 1)
+		source := rand.NewSource(time.Now().UnixNano())
+		random := rand.New(source)
+		r := random.Intn(len(d) - 1)
 		d[i], d[r] = d[r], d[i]
 	}
 }
