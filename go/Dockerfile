@@ -4,16 +4,19 @@ LABEL maintainer="Nguyen Nguyen <nguyenbk92@gmail.com>"
 # Set the working directory to /app
 WORKDIR /app
 
+RUN apk add --no-cache \
+		ca-certificates
+
+# set up nsswitch.conf for Go's "netgo" implementation
+# - https://github.com/golang/go/blob/go1.9.1/src/net/conf.go#L194-L275
+# - docker run --rm debian:stretch grep '^hosts:' /etc/nsswitch.conf
+RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
+
 ENV GOLANG_VERSION 1.11.1
 
-RUN  apk add --update \
-    git \
-    bash \
-    make \
-    g++
-
 RUN set -eux; \
-	apk add --no-cache --virtual .build-deps \
+	apk add --no-cache \
+    	git \
 		bash \
 		gcc \
 		musl-dev \
@@ -66,4 +69,4 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 # Copy the current directory contents into the container at /app
 COPY go /app/go/
 
-RUN go test ./topics/cards
+RUN go test ./go/topics/cards
