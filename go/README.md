@@ -27,7 +27,7 @@ We need to specify data type when we declare them
 - int
 - float64
 - array
-- map
+- map: key -> value : all keys are same type, all values are same type
 
 Value Types: int, float, string, bool, struct
 Reference Types: slice, maps, channels, pointers, functions
