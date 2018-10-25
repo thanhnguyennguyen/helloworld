@@ -1,4 +1,7 @@
-# GO: not an OOP language
+# GO: not an OOP language, is a pass by value language
+
+https://play.golang.org/
+
 I need to learn GO and resolve a small problem using GO in 2 days to get a new job
 OK, let go to GO world
 
@@ -25,6 +28,10 @@ We need to specify data type when we declare them
 - float64
 - array
 - map
+
+Value Types: int, float, string, bool, struct
+Reference Types: slice, maps, channels, pointers, functions
+
 
 ### Declare new variables:
 - var [variable name] [datatype]
