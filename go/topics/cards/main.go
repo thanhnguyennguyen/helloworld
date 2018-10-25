@@ -10,8 +10,6 @@ func main() {
 	// fmt.Println("Remaining cards:")
 	// remainingCards.print()
 	// cards.saveToFile("deck.txt")
-	newDeck, err := loadDeckFromFile("deck.txt")
-	if err == nil {
-		newDeck.print()
-	}
+	newDeck := loadDeckFromFile("deck.txt")
+	newDeck.print()
 }
