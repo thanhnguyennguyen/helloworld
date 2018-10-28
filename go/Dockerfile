@@ -1,13 +1,13 @@
-FROM golang:latest 
+# STEP 1 build executable binary
+FROM golang:alpine as builder
+# Install git
+RUN apk update && apk add git
+# Create appuser
+RUN adduser -D -g '' appuser
 
 LABEL maintainer="Nguyen Nguyen <nguyenbk92@gmail.com>"
 # Set the working directory to /app
 WORKDIR /app
-RUN  apk add --update \
-    git \
-    bash \
-    make \
-    g++
 
 ENV GOLANG_VERSION 1.11.1
 
