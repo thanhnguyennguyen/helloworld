@@ -4,5 +4,5 @@
 
 
 
-learning new programming languages is never a problem with a software engineer
+learning new programming languages is never a problem with of software engineers
 
