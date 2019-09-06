@@ -55,3 +55,6 @@ Reference Types: slice, maps, channels, pointers, functions
 - slice: an array that can grow or shrink
 
             letters := []string{"a", "b", "c", "d"}
+            
+### The state of Caching in Go
+https://blog.dgraph.io/post/caching-in-go/
