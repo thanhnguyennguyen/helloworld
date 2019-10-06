@@ -15,6 +15,6 @@ WORKDIR /app
 
 
 # Copy the current directory contents into the container at /app
-COPY ./ /app/python
+COPY ./ /app/
 
-RUN cd python && python -m unittest discover -s ./tests  -p '*_test.py'
+RUN python -m unittest discover -s ./tests  -p '*_test.py'
