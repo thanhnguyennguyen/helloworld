@@ -11,5 +11,5 @@ def display():
     print(type(z))
 
 
-def genrand():
-    print(random.randrange(1, 10))
+def genrand() -> int:
+    return random.randrange(1, 10)
