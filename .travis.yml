@@ -17,6 +17,10 @@ matrix:
 
     - language: rust
       rust: stable
+      before_cache:
+        - rm -rf "$TRAVIS_HOME/.cargo/registry/src"
+        ⋮ # rest of your existing "before_cache"
+      cache: cargo
       before_script:
         - cd rust
       script:
