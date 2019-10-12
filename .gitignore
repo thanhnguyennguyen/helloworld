@@ -1,2 +1,3 @@
-python/.idea
+*/.idea
+rust/*/target/
 *.pyc
