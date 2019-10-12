@@ -9,3 +9,8 @@ class TestPalindromeMethods(unittest.TestCase):
         self.assertTrue(palindrome("abba"))
         self.assertFalse((palindrome("nguyennguyen")))
 
+
+    def test_palindrome2(self):
+        self.assertTrue(palindrome("abba"))
+        self.assertFalse((palindrome("nguyennguyen")))
+
