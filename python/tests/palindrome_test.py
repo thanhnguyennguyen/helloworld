@@ -1,10 +1,11 @@
 import unittest
 
-from strings.palindrome import isPalindrome
+from strings.palindrome import palindrome
 
 
-class TestPalindrome(unittest.TestCase):
+class TestPalindromeMethods(unittest.TestCase):
 
     def test_palindrome(self):
-        self.assertEqual(isPalindrome("nguyennguyen"), False)
+        self.assertTrue(palindrome("abba"))
+        self.assertFalse((palindrome("nguyennguyen")))
 
