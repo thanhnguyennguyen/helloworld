@@ -15,3 +15,12 @@ matrix:
       script:
         - python -m unittest discover -s ./tests  -p '*_test.py'
 
+    - language: rust
+      rust: stable
+      before_script:
+        - cd rust
+      script:
+        - cd hello_cargo
+        - cargo build --verbose --all
+        - cargo test --verbose --all
+
