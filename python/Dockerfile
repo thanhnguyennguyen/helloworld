@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM python:3.7.4-alpine
 # Install git
 RUN apk update && apk add git
 
@@ -13,4 +13,5 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY ./ /app/
 RUN python --version
-RUN python3 -m unittest tests/*_test.py -v
+RUN pwd && ls
+RUN cd tests && python3  -m unittest *_test.py -v
