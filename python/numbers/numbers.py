@@ -13,3 +13,5 @@ def display():
 
 def genrand() -> int:
     return random.randrange(1, 10)
+
+genrand()

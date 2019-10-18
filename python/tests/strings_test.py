@@ -1,9 +1,13 @@
 import unittest
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '../strings')
 
-from strings.strings import stringcount
+import strings
 
 
 class TestStringMethods(unittest.TestCase):
 
     def test_stringcount(self):
-        self.assertEqual(stringcount("python is great. python is awesome"), 2)
+        self.assertEqual(strings.stringcount("python is great. python is awesome"), 2)
+
