@@ -14,4 +14,4 @@ WORKDIR /app
 COPY ./ /app/
 RUN python --version
 RUN pwd && ls
-RUN cd tests && python3  -m unittest discover  -p '*_test.py' -v
+RUN cd python/tests && python3  -m unittest discover  -p '*_test.py' -v
