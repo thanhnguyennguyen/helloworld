@@ -1,6 +1,10 @@
+import sys
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '../numbers')
+
 import unittest
 
-from numbers import numbers
+import numbers
 
 
 class TestRandomMethods(unittest.TestCase):

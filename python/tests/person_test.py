@@ -1,6 +1,10 @@
 import unittest
+import sys
 
-from classes import Person
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '../classes')
+
+import Person
 
 
 class TestClassMethods(unittest.TestCase):
