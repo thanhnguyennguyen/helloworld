@@ -1,6 +1,9 @@
 import unittest
+import sys
 
-from strings import palindrome
+# insert at 1, 0 is the script path (or '' in REPL)
+sys.path.insert(1, '../strings')
+import palindrome
 
 
 class TestPalindromeMethods(unittest.TestCase):
