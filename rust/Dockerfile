@@ -3,7 +3,7 @@ FROM alpine:3.10
 RUN apk add --no-cache \
         ca-certificates \
         gcc
-RUN apk add git
+RUN apk add git && apk add bash
 LABEL maintainer="Nguyen Nguyen <nguyenbk92@gmail.com>"
 # Set the working directory to /app
 WORKDIR /app
