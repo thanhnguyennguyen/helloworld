@@ -1,6 +1,6 @@
 FROM python:3.7.4-alpine
 # Install git
-RUN apk update && apk add git
+RUN apk update && apk add git && apk add bash
 
 # Create appuser
 RUN adduser -D -g '' appuser
