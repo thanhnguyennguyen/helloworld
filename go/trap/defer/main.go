@@ -13,6 +13,8 @@ import (
 func main() {
 	start := time.Now()
 	defer fmt.Println(time.Since(start))
-	time.Sleep(2 * time.Second)
+	defer func() {
 	fmt.Println("hey", time.Since(start))
+	}()
+	time.Sleep(2 * time.Second)
 }
