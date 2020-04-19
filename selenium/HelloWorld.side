@@ -1,0 +1,133 @@
+{
+  "id": "29807eea-1753-4f46-ab4a-eb84871b5752",
+  "version": "2.0",
+  "name": "HelloWorld",
+  "url": "https://vnexpress.net/",
+  "tests": [{
+    "id": "657c05ea-23e3-4671-a47d-01dec8974492",
+    "name": "VNEXPRESS",
+    "commands": [{
+      "id": "be7e869f-27f7-49bb-b59c-a2c230a227b7",
+      "comment": "",
+      "command": "open",
+      "target": "https://vnexpress.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8bc81f2-788b-42ef-a6b5-cb87f8226656",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1402x804",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a8b81ac-d9dd-409c-ab77-de97a504ab88",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.logo > img",
+      "targets": [
+        ["css=.logo > img", "css:finder"],
+        ["xpath=//img[@alt='VNExpress']", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75e1bda9-3815-49f3-ac1c-23fbfa62e203",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.logo > img",
+      "targets": [
+        ["css=.logo > img", "css:finder"],
+        ["xpath=//img[@alt='VNExpress']", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0546009f-c4f6-416b-8a67-c3582f495784",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logo > img",
+      "targets": [
+        ["css=.logo > img", "css:finder"],
+        ["xpath=//img[@alt='VNExpress']", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "062fce9c-f92f-4516-bed8-4b28559f2e8f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Bóng đá",
+      "targets": [
+        ["linkText=Bóng đá", "linkText"],
+        ["css=.thethao li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Bóng đá')]", "xpath:link"],
+        ["xpath=//section[@id='wrap-main-nav']/nav/ul/li[8]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/bong-da')]", "xpath:href"],
+        ["xpath=//li[8]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Bóng đá')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdb3e005-e57c-4fb0-8982-d74956ec8abc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.article-topstory .lazy",
+      "targets": [
+        ["css=.article-topstory .lazy", "css:finder"],
+        ["xpath=//img[@alt='Shevchenko và những năm tháng buồn ở Chelsea']", "xpath:img"],
+        ["xpath=//picture/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5086e2b-e133-4f69-9988-aa256897d33f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.article-topstory .lazy",
+      "targets": [
+        ["css=.article-topstory .lazy", "css:finder"],
+        ["xpath=//img[@alt='Shevchenko và những năm tháng buồn ở Chelsea']", "xpath:img"],
+        ["xpath=//picture/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d9595f2-ca4e-4fde-8a5f-b9423291092f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi.",
+      "targets": [
+        ["linkText=Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi.", "linkText"],
+        ["css=.full-thumb > .description > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi.')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://vnexpress.net/shevchenko-va-nhung-nam-thang-buon-o-chelsea-4086626.html')])[3]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi. ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f2b676c-db72-4a72-b51a-83d2cd92e53f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi.",
+      "targets": [
+        ["linkText=Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi.", "linkText"],
+        ["css=.full-thumb > .description > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi.')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://vnexpress.net/shevchenko-va-nhung-nam-thang-buon-o-chelsea-4086626.html')])[3]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Andriy Shevchenko đến Chelsea hè 2006 với tư cách tiền đạo hay nhất thế giới, nhưng bị xem như vụ mua hớ nhất thời đại khi rời đi. ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9ece1ebe-8306-42de-9667-0c9a9bbea1fa",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://tomochain.slack.com/", "https://www.facebook.com/imanormalone", "https://vnexpress.net/"],
+  "plugins": []
+}
