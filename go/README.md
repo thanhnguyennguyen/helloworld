@@ -32,6 +32,7 @@ We need to specify data type when we declare them
 Value Types: int, float, string, bool, struct
 Reference Types: slice, maps, channels, pointers, functions
 
+**For integer, we should always multiple first, divide later**
 
 ### Declare new variables:
 - var [variable name] [datatype]
