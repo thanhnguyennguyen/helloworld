@@ -3,3 +3,4 @@ rust/*/target/
 *.pyc
 java/*/build/*
 java/*/.gradle/*
+java/*/target/*
