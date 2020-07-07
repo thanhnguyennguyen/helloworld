@@ -4,3 +4,4 @@ rust/*/target/
 java/*/build/*
 java/*/.gradle/*
 java/*/target/*
+java/*/.mvn/*
