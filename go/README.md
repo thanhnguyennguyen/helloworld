@@ -59,3 +59,5 @@ Reference Types: slice, maps, channels, pointers, functions
             
 ### The state of Caching in Go
 https://blog.dgraph.io/post/caching-in-go/
+
+### [Do while pattern in Golang](https://yourbasic.org/golang/do-while-loop/)
