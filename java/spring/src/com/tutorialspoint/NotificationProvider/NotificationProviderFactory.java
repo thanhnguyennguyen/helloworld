@@ -1,7 +1,7 @@
 package com.tutorialspoint.NotificationProvider;
 
 public class NotificationProviderFactory {
-	   public NotificationProvider getProvider(NotificationProviderType type){
+	   public static NotificationProvider getProvider(NotificationProviderType type){
 		   NotificationProvider provider = null;
 	      switch (type) {
 	      case EMAIL:

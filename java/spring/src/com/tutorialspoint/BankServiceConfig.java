@@ -12,7 +12,7 @@ public class BankServiceConfig {
 
    @Bean 
    public NotificationProvider notificationProvider(NotificationProviderType providerType){
-      return new NotificationProviderFactory().getProvider(providerType);
+      return NotificationProviderFactory.getProvider(providerType);
    }
    
    @Bean 
