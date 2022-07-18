@@ -2,6 +2,7 @@ package com.tutorialspoint;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
@@ -16,10 +17,11 @@ public class MainApp {
 //	    	      HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
 //	    	      helloWorld.setMessage("Hello World!");
 //	    	      helloWorld.getMessage();
-		ApplicationContext bankCtx = new AnnotationConfigApplicationContext(BankServiceConfig.class);
+      AbstractApplicationContext bankCtx = new AnnotationConfigApplicationContext(BankServiceConfig.class);
 
 		BankService bank = bankCtx.getBean(BankService.class);
-		bank.updateData();   
+		bank.updateData();
+		bankCtx.registerShutdownHook();
 	    	      
    }
 }

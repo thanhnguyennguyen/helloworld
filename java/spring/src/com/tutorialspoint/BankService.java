@@ -12,6 +12,12 @@ public class BankService {
 		this.notificationProvider = notificationProvider;
 	}
 
+	private void init() {
+		System.out.println("Init BankService");
+	}
+	private void cleanup() {
+		System.out.println("destroying BankService");
+	}
 	private void sendNotification() {
 		this.notificationProvider.sendNotification();
 	}
