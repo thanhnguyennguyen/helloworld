@@ -6,29 +6,31 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
-   public static void main(String[] args) {
-      ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-      HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
-      obj.getMessage();
-	   
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+		obj.getMessage();
+		((AbstractApplicationContext) context).close();
+
 //	      ApplicationContext ctx = 
 //	    	         new AnnotationConfigApplicationContext(HelloWorldConfig.class);
 //	    	   
 //	    	      HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
 //	    	      helloWorld.setMessage("Hello World!");
 //	    	      helloWorld.getMessage();
-      AbstractApplicationContext bankCtx = new AnnotationConfigApplicationContext(BankServiceConfig.class);
+		AbstractApplicationContext bankCtx = new AnnotationConfigApplicationContext(BankServiceConfig.class);
 
 		BankService bank = bankCtx.getBean(BankService.class);
 		bank.updateData();
 		bankCtx.registerShutdownHook();
-	    	      
-		
-	      ApplicationContext studentCtx = new ClassPathXmlApplicationContext("BeanStudent.xml");
-	      
-	      Student student = (Student) studentCtx.getBean("student");
-	      student.getName();
-	      student.getAge();
-	      
-   }
+		((AbstractApplicationContext) bankCtx).close();
+
+		ApplicationContext studentCtx = new ClassPathXmlApplicationContext("BeanStudent.xml");
+
+		Student student = (Student) studentCtx.getBean("student");
+		student.getName();
+		student.getAge();
+		((AbstractApplicationContext) studentCtx).close();
+
+	}
 }
