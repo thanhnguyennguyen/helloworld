@@ -7,4 +7,5 @@ java/*/target/*
 java/*/.mvn/*
 java/*.class
 java/*.claspath
+java/spring/.classpath
 

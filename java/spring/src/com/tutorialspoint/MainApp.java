@@ -23,5 +23,12 @@ public class MainApp {
 		bank.updateData();
 		bankCtx.registerShutdownHook();
 	    	      
+		
+	      ApplicationContext studentCtx = new ClassPathXmlApplicationContext("BeanStudent.xml");
+	      
+	      Student student = (Student) studentCtx.getBean("student");
+	      student.getName();
+	      student.getAge();
+	      
    }
 }
