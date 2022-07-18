@@ -1,6 +1,7 @@
 package com.tutorialspoint;
 
-public class Student {
+
+public class Student{
    private Integer age;
    private String name;
 
@@ -22,4 +23,6 @@ public class Student {
       System.out.println("Exception raised");
       throw new IllegalArgumentException();
    }
+   
+   
 }
