@@ -1,6 +1,6 @@
-package com.tutorialspoint;
+package com.tutorialspoint.IoC;
 
-import com.tutorialspoint.NotificationProvider.*;
+import com.tutorialspoint.IoC.NotificationProvider.*;
 
 public class BankService {
 	private Database database;

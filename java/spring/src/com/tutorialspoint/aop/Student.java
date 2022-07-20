@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.aop;
 
 
 public class Student{

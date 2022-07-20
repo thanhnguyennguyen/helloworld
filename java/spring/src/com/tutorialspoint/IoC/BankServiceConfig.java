@@ -1,8 +1,8 @@
-package com.tutorialspoint;
-
-import com.tutorialspoint.NotificationProvider.*;
+package com.tutorialspoint.IoC;
 
 import org.springframework.context.annotation.*;
+
+import com.tutorialspoint.IoC.NotificationProvider.*;
 
 @Configuration
 public class BankServiceConfig {

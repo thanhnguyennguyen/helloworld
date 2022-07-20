@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.aop;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
@@ -14,7 +14,7 @@ public class Logging {
       *  all the methods available. So advice will be called
       *  for all the methods.
    */
-   @Pointcut("execution(* com.tutorialspoint.*.*(..))")
+   @Pointcut("execution(* com.tutorialspoint.aop.*.*(..))")
    private void selectAll(){}
 
    /** 

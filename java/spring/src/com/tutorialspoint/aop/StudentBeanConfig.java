@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.aop;
 
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -18,11 +18,11 @@ public class StudentBeanConfig {
 		return new Student();
 	}
 
-	@Pointcut("execution(* com.tutorialspoint.Student.set*(..))")
+	@Pointcut("execution(* com.tutorialspoint.aop.Student.set*(..))")
 	private void setVal() {
 	}
 
-	@Pointcut("execution(* com.tutorialspoint.Student.get*(..))")
+	@Pointcut("execution(* com.tutorialspoint.aop.Student.get*(..))")
 	private void getVal() {
 	}
 

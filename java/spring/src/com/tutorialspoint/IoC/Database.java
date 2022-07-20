@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.IoC;
 
 public class Database {
    public Database(){

@@ -1,4 +1,4 @@
-package com.tutorialspoint.NotificationProvider;
+package com.tutorialspoint.IoC.NotificationProvider;
 
 public class SlackProvider implements NotificationProvider {
 	@Override

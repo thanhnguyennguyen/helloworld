@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.tutorialspoint.helloworld;
 import org.springframework.context.annotation.*;
 
 @Configuration

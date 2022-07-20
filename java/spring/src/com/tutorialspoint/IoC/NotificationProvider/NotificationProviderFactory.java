@@ -1,4 +1,4 @@
-package com.tutorialspoint.NotificationProvider;
+package com.tutorialspoint.IoC.NotificationProvider;
 
 public class NotificationProviderFactory {
 	   public static NotificationProvider getProvider(NotificationProviderType type){
