@@ -1,8 +1,10 @@
 package com.tutorialspoint;
 
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -16,30 +18,39 @@ public class StudentBeanConfig {
 		return new Student();
 	}
 
-	@Before("execution(* com.tutorialspoint.Student.setName(..))")
-	public void logBeforeSettingName() throws Throwable {
-		System.out.println("Before setting name");
+	@Pointcut("execution(* com.tutorialspoint.Student.set*(..))")
+	private void setVal() {
 	}
-	@Before("execution(* com.tutorialspoint.Student.setAge(..))")
-	public void logBeforeSettingAge() throws Throwable {
-		System.out.println("Before setting age");
+
+	@Pointcut("execution(* com.tutorialspoint.Student.get*(..))")
+	private void getVal() {
 	}
-	
-	@Before("execution(* com.tutorialspoint.Student.getName(..))")
-	public void logBeforeGettingName() throws Throwable {
-		System.out.println("Before getting name");
-	}
-	@Before("execution(* com.tutorialspoint.Student.getAge(..))")
-	public void logBeforeGettingAge() throws Throwable {
-		System.out.println("Before getting age");
+
+	@Before("setVal()")
+	public void beforeSetVal() {
+		System.out.println("Going to setup student profile.");
 	}
 	
-	@AfterReturning("execution(* com.tutorialspoint.Student.getName(..))")
-	public void logAfterGettingName() throws Throwable {
-		System.out.println("After returning name");
+	@Before("getVal()")
+	public void beforeGetVal() {
+		System.out.println("Going to get student profile.");
 	}
-	@AfterReturning("execution(* com.tutorialspoint.Student.getAge(..))")
-	public void logAfterGettingAge() throws Throwable {
-		System.out.println("After returning age");
-	}
+	
+	   /** 
+     * This is the method which I would like to execute
+     * when any method returns.
+  */
+  @AfterReturning(pointcut = "getVal()", returning = "retVal")
+  public void afterReturningAdvice(Object retVal){
+     System.out.println("Returning:" + retVal.toString() );
+  }
+
+  /**
+     * This is the method which I would like to execute
+     * if there is an exception raised by any method.
+  */
+  @AfterThrowing(pointcut = "getVal()", throwing = "ex")
+  public void AfterThrowingAdvice(IllegalArgumentException ex){
+     System.out.println("There has been an exception: " + ex.toString());   
+  }
 }
