@@ -18,8 +18,6 @@ public class MainApp {
 		BankService bank = bankCtx.getBean(BankService.class);
 		bank.updateData();
 		bankCtx.registerShutdownHook();
-		((AbstractApplicationContext) bankCtx).close();
-
-		
+		((AbstractApplicationContext) bankCtx).close();	
 	}
 }
