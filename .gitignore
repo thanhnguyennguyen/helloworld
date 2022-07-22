@@ -6,4 +6,5 @@ java/*/.gradle/*
 java/*/target/*
 java/*/.mvn/*
 java/*.class
+java/spring/src/config.properties
 
